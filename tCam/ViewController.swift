@@ -2,9 +2,9 @@
 //  ViewController.swift
 //  tCam
 //
-//  Created by Manabu Tonosaki on 2019/03/18.
-//  Copyright © 2019 sysartist. All rights reserved.
-//
+//  Created by Manabu Tonosaki on 2019/11/10.
+//  Copyright © 2019 Manabu Tonosaki. All rights reserved.
+//  Licensed under the MIT license.
 
 import UIKit
 import AVFoundation
@@ -23,18 +23,18 @@ class ViewController: UIViewController, AVCapturePhotoCaptureDelegate, AVCapture
     {
         super.viewDidLoad()
         
-        // スワイプ処理
+        // Swipe
         viewCamera.backgroundColor = UIColor.black
         let panGestureRecognizer = UIPanGestureRecognizer(target: self, action: #selector(panGesture(sender:)))
         viewCamera.addGestureRecognizer(panGestureRecognizer)
         
-        // カメラの設定
+        // Camera settings
         captureSesssion = AVCaptureSession()
         captureSesssion.sessionPreset = .high
 
         stillImageOutput = AVCapturePhotoOutput()
 
-        //　カメラデバイスのインスタンスを取得（背面カメラ）
+        // Get main camera device instance
         let deviceDiscoverySession = AVCaptureDevice.DiscoverySession(deviceTypes: [AVCaptureDevice.DeviceType.builtInWideAngleCamera], mediaType: AVMediaType.video, position: AVCaptureDevice.Position.unspecified)
         let devices = deviceDiscoverySession.devices
         for device in devices
