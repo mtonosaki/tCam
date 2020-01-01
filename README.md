@@ -1,5 +1,5 @@
 # tCam
-A very simple iOS Camera without recording feature (Just send to Apple TV)
+Only for sending camera image to Apple TV. A very simple iOS camera. No recording function.
 
 ![](https://aqtono.com/tomarika/tcam/tCamIcon.png)  
 
